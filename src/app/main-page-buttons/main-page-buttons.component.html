@@ -1,8 +1,16 @@
-<p>
-  main-page-buttons works!
-</p>
-<div *ngFor="let button of buttonList; let i = index">
-  <p>Button name: {{button[i]}}</p>
-  <button type="button">{{button[i]}}</button>
-</div>
+<hr>
 
+<div class="container-fluid">
+  <nav class="row">
+    <div class="col-lg" *ngFor="let button of buttonList; let i = index">
+      <div align="center">
+        <a routerLink="{{button.routePath}}" routerLinkActive="active">
+          <button class="btn btn-dark" type="button">
+            <fa-icon icon={{button.icon}} class="fa-3x"></fa-icon>
+            <h3>{{button.name}}</h3>
+          </button>
+        </a>
+      </div>
+    </div>
+  </nav>
+</div>

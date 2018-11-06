@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 
 import {BsDropdownModule, TooltipModule, ModalModule} from 'ngx-bootstrap';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
@@ -9,6 +10,12 @@ import { WebGLComponent } from './web-gl/web-gl.component';
 import { BabylonBasicComponent } from './babylon-basic/babylon-basic.component';
 import { MainPageButtonsComponent } from './main-page-buttons/main-page-buttons.component';
 import { NavbarTopComponent } from './navbar-top/navbar-top.component';
+
+const appRoutes: Routes = [
+  {path: 'webgl', component: WebGLComponent },
+  {path: 'babylonGames', component: BabylonBasicComponent}
+];
+
 
 @NgModule({
   declarations: [
@@ -20,6 +27,10 @@ import { NavbarTopComponent } from './navbar-top/navbar-top.component';
   ],
   imports: [
     BrowserModule,
+    RouterModule.forRoot(
+      appRoutes,
+      {enableTracing: true}
+    ),
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
