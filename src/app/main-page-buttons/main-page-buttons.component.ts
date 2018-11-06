@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-main-page-buttons',
@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page-buttons.component.css']
 })
 export class MainPageButtonsComponent implements OnInit {
+  public buttonList = [
+    'webgl',
+    '3Dgames'
+    ];
 
   constructor() { }
 

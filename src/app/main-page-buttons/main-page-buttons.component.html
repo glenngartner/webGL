@@ -1,3 +1,8 @@
 <p>
   main-page-buttons works!
 </p>
+<div *ngFor="let button of buttonList; let i = index">
+  <p>Button name: {{button[i]}}</p>
+  <button type="button">{{button[i]}}</button>
+</div>
+
