@@ -10,10 +10,17 @@ import { WebGLComponent } from './web-gl/web-gl.component';
 import { BabylonBasicComponent } from './babylon-basic/babylon-basic.component';
 import { MainPageButtonsComponent } from './main-page-buttons/main-page-buttons.component';
 import { NavbarTopComponent } from './navbar-top/navbar-top.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AppsPageComponent } from './apps-page/apps-page.component';
+import { GameArtComponent } from './game-art/game-art.component';
+import { ExternalSitesComponent } from './external-sites/external-sites.component';
 
 const appRoutes: Routes = [
+  {path: 'home', component: HomePageComponent },
   {path: 'webgl', component: WebGLComponent },
-  {path: 'babylonGames', component: BabylonBasicComponent}
+  {path: 'babylonGames', component: BabylonBasicComponent},
+  {path: 'appsPage', component: AppsPageComponent},
+  {path: 'gameArtPage', component: GameArtComponent}
 ];
 
 
@@ -23,7 +30,11 @@ const appRoutes: Routes = [
     WebGLComponent,
     BabylonBasicComponent,
     MainPageButtonsComponent,
-    NavbarTopComponent
+    NavbarTopComponent,
+    HomePageComponent,
+    AppsPageComponent,
+    GameArtComponent,
+    ExternalSitesComponent
   ],
   imports: [
     BrowserModule,

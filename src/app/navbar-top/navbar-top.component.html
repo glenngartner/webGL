@@ -1,12 +1,15 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand">
-        <fa-icon icon="fire" class="fa-2x"></fa-icon>
-      </a>
-      <span class="navbar-brand"><h2>G's Creations</h2></span>
+<nav class="navbar navbar-dark bg-dark mb-5">
+  <a class="navbar-brand" routerLink="home">
+    <fa-icon icon="fire" class="fa-2x"></fa-icon>
+  </a>
+  <div class="navbar-expand mr-auto">
+    <div class="navbar-nav">
+      <app-main-page-buttons></app-main-page-buttons>
     </div>
-    <ul class="nav navbar-nav">
-    </ul>
+  </div>
+  <div class="navbar-expand ml-auto navbar-nav">
+    <div class="navbar-nav">
+      <app-external-sites></app-external-sites>
+    </div>
   </div>
 </nav>

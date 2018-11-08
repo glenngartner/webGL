@@ -1,16 +1,8 @@
-<hr>
-
-<div class="container-fluid">
-  <nav class="row">
-    <div class="col-md" *ngFor="let button of buttonList; let i = index">
-      <div align="center">
-        <a routerLink="{{button.routePath}}" routerLinkActive="active">
-          <button class="btn btn-dark" type="button">
-            <fa-icon icon={{button.icon}} class="fa-3x"></fa-icon>
-            <h3>{{button.name}}</h3>
-          </button>
-        </a>
-      </div>
-    </div>
-  </nav>
-</div>
+<a class="nav-item" *ngFor="let button of buttonList">
+  <a routerLink="{{button.routePath}}" routerLinkActive="active">
+    <button class="btn btn-dark" type="button">
+      <!--<fa-icon icon={{button.icon}} class="fa-3x"></fa-icon>-->
+      {{button.name}}
+    </button>
+  </a>
+</a>

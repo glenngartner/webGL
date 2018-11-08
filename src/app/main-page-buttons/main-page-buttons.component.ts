@@ -17,8 +17,11 @@ interface Button {
 })
 export class MainPageButtonsComponent implements OnInit {
   public buttonList: Button[] = [
-    {name: 'WebGL', icon: 'book-open', routePath: 'webgl'},
-    {name: '3D Games', icon: 'gamepad', routePath: 'babylonGames'}
+    {name: 'Home', icon: '', routePath: 'home'},
+    {name: 'Games', icon: 'gamepad', routePath: 'babylonGames'},
+    {name: 'Apps', icon: '', routePath: 'appsPage'},
+    {name: 'Art', icon: '', routePath: 'gameArtPage'},
+    {name: 'WebGL', icon: 'book-open', routePath: 'webgl'}
   ];
 
   constructor() {
